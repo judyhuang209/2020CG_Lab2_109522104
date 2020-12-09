@@ -35,7 +35,7 @@ void myDisplay(void) {
 	while (input >> c) {
 		if (c == "#") {
 			cout << c << " ";
-			getline(cin, c);
+			getline(input, c);
 			cout << c << endl;
 			//break;
 		}
@@ -45,20 +45,20 @@ void myDisplay(void) {
 		}
 		else if (c == "scale") {
 			float a, b = 0;
-			cin >> a >> b;
+			input >> a >> b;
 			drawDot((int)floor(a), (int)floor(b));
 			cout << c << " " << a << " " << b << endl;
 			//break;
 		}
 		else if (c == "rotate") {
 			float theta = 0;
-			cin >> theta;
+			input >> theta;
 			cout << c << " " << theta << endl;
 			//break;
 		}
 		else if (c == "translate") {
 			float x, y = 0;
-			cin >> x >> y;
+			input >> x >> y;
 			cout << c << " " << x << " " << y << endl;
 			//break;
 		}
@@ -72,9 +72,9 @@ void myDisplay(void) {
 		}
 		else if (c == "view") {
 			float wxl, wxr, wyb, wyt, vxl, vxr, vyb, vyt = 0;
-			cin >> wxl >> wxr >> wyb >> wyt >> vxl >> vxr >> vyb >> vyt;
+			input >> wxl >> wxr >> wyb >> wyt >> vxl >> vxr >> vyb >> vyt;
 			cout << c << endl;
-			system("pause");
+			// system("pause");
 			//break;
 		}
 		else if (c == "clearData") {
